@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS `wp_pjt_order_response` (
+`id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+`qr_url`  varchar(255) NULL  COMMENT '二维码地址',
+`ver_code`  varchar(10) NULL  COMMENT '验证码值',
+`pjt_order_code`  varchar(30) NULL  COMMENT '票景通系统订单号',
+`num`  int(10) NULL  COMMENT '出票数量',
+`in_num`  int(10) NULL  COMMENT '实际入园人数',
+`price`  varchar(10) NULL  COMMENT '单价',
+`total`  varchar(10) NULL  COMMENT '总价',
+`order_date`  varchar(30) NULL  COMMENT '下单日期',
+`ticket_code`  varchar(20) NULL  COMMENT '门票编码',
+`ticket_name`  varchar(255) NULL  COMMENT '门票名称',
+`order_id`  int(10) NULL  COMMENT '微商城订单号',
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci CHECKSUM=0 ROW_FORMAT=DYNAMIC DELAY_KEY_WRITE=0;
+INSERT INTO `wp_model` (`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type`,`addon`) VALUES ('pjt_order_response','票景通下单结果','0','','1','','1:基础','','','','','','10','','','1451105780','1451105780','1','MyISAM','Pjt');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('qr_url','二维码地址','varchar(255) NULL','string','','','1','','0','0','1','1451105916','1451105916','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('ver_code','验证码值','varchar(10) NULL','string','','','1','','0','0','1','1451106260','1451106075','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('pjt_order_code','票景通系统订单号','varchar(30) NULL','string','','','1','','0','0','1','1451106248','1451106248','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('num','出票数量','int(10) NULL','num','','','1','','0','0','1','1451106408','1451106408','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('in_num','实际入园人数','int(10) NULL','num','','','1','','0','0','1','1451106437','1451106437','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('price','单价','varchar(10) NULL','string','','','1','','0','0','1','1451106514','1451106514','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('total','总价','varchar(10) NULL','string','','','1','','0','0','1','1451106545','1451106545','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('order_date','下单日期','varchar(30) NULL','string','','','1','','0','0','1','1451106885','1451106885','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('ticket_code','门票编码','varchar(20) NULL','string','','','1','','0','0','1','1451107145','1451107145','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('ticket_name','门票名称','varchar(255) NULL','string','','','1','','0','0','1','1451107194','1451107194','','3','','regex','','3','function');
+INSERT INTO `wp_attribute` (`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type`) VALUES ('order_id','微商城订单号','int(10) NULL','num','','','1','','0','0','1','1451107630','1451107630','','3','','regex','','3','function');
+UPDATE `wp_attribute` SET model_id= (SELECT MAX(id) FROM `wp_model`) WHERE model_id=0;

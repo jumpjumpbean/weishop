@@ -1,0 +1,24 @@
+<include file="Public/mobile_head"/>
+<link href="{:ADDON_PUBLIC_PATH}/mobile/common.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+<body>
+    <div class="container">
+	<form action="javascript:history.back(-1);" method="get">
+    	<div class="address_list">
+        	<ul>
+                <volist name="coupons" id="vo" empty="您没有可用的优惠券">
+            	<li>
+                	<a class="address_item" href="{:U('confirm_order',array('coupon_id'=>$vo['id']))}" title="选择">
+                    	<em class="radio_icon">&nbsp;</em>
+                    	<p>标题:{$vo.title} 金额:<span style="color:red">￥{$vo.deduction|wp_money_format}</span></p>
+                        <p><b>使用说明:{$vo.use_tips}</b>过期时间:{$vo.over_time|time_format}</p>
+                    </a>
+                </li>
+                </volist>
+            </ul>
+        </div>
+	<!--实现多选或不选-->
+	<!--<button class="btn" type="submit">保存</button>-->
+	</form>
+    </div>	
+</body>
+</html>
